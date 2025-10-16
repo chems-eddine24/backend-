@@ -32,7 +32,6 @@ class TokenData(BaseModel):
     email: Optional[str] = None
 
 class UserCreate(BaseModel):
-    id : int
     email : str
     password: str
 
