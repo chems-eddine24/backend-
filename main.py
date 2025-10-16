@@ -130,8 +130,8 @@ def get_all_books(urrent_user: User = Depends(get_current_active_user), db:Sessi
 
 @app.get("/search/books/")
 def get_book(book_name: str, urrent_user: User = Depends(get_current_active_user)):
-    API_KEY = "AIzaSyC-WwPWyLqa-Yzj1a99EBMVYZVRpKjeB0g"
-    url = f"https://www.googleapis.com/books/v1/volumes?q={book_name}&key={API_KEY}"
+    
+    url = f"https://www.googleapis.com/books/v1/volumes?q={book_name}&key={os.getenv("API_KEY")}"
     r = requests.get(url)
     data = r.json()
 
