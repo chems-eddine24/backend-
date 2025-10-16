@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Databases
+*.db
+*.sqlite3
+
+# Environments
+venv/
+env/
+FastApi/lib/
+FastApi/include/
+FastApi/bin/
+
+# OS-specific
+.DS_Store
+
+# IDE settings
+.vscode/
+.idea/
