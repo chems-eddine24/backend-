@@ -8,10 +8,12 @@ from db import *
 from typing import List
 import requests
 from security import *
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
-db_url = "/home/james-dine/Apps/Python/FastApi/library.db"
-engine = create_engine(f"sqlite:///{db_url}")
+engine = create_engine(f"sqlite:///{os.getenv("DB_URL")}")
 connection = engine.connect()
 
 def get_db():
